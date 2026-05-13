@@ -1,64 +1,65 @@
-# Arduino Binary Counter
+# Arduino Projects
 
-A simple binary counter implemented using Arduino and LEDs.  
-This project demonstrates how binary numbers can be displayed using multiple LEDs connected to an Arduino board.
+A collection of my Arduino projects built while learning electronics and embedded systems.
 
-## Components Used
+---
 
-- Arduino Uno
-- LEDs
-- Resistors
-- Breadboard
-- Jumper wires
+# 1. Binary LED Counter (0–15)
+
+## Description
+This project is a 4-bit binary counter using Arduino and LEDs.  
+The LEDs display binary numbers from 0 to 15 continuously with a delay between each count.
+
+---
 
 ## Working Principle
+The Arduino sends HIGH and LOW signals to 4 LEDs connected to digital output pins.
 
-The Arduino continuously counts numbers in binary format and displays the output through LEDs.
+- Each LED represents one binary bit.
+- The LEDs glow in combinations to represent numbers in binary form.
+- The count increases from:
+  - `0000` → Decimal 0
+  - to
+  - `1111` → Decimal 15
 
-Each LED represents one bit:
-- ON  → 1
-- OFF → 0
+After reaching 15, the counter resets back to 0 and repeats.
 
-The LEDs glow according to the binary value of the current count.
-
-Example:
-
-| Decimal | Binary |
-|---------|---------|
-| 0 | 0000 |
-| 1 | 0001 |
-| 2 | 0010 |
-| 3 | 0011 |
-| 4 | 0100 |
+---
 
 ## Features
+- Displays binary counting from 0 to 15
+- Simple beginner-friendly Arduino project
+- Demonstrates binary number representation
+- Uses basic electronic components
+- Easy to modify for higher-bit counters
 
-- Binary counting using LEDs
-- Arduino-based implementation
-- Easy beginner electronics project
-- Demonstrates digital logic concepts
+---
 
-## Circuit
+## Components Used
+- Arduino Uno
+- 4 LEDs
+- 4 × 220Ω Resistors
+- Breadboard
+- Jumper Wires
 
-The circuit was designed and simulated using Tinkercad.
-
-## Files Included
-
-- `project2.ino` → Arduino source code
+---
 
 ## Applications
+- Learning binary number systems
+- Understanding digital electronics basics
+- Beginner embedded systems practice
+- Educational demonstration project
+- Foundation for digital counter systems
 
-- Learning binary numbers
-- Understanding digital electronics
-- Arduino practice project
-- Educational demonstrations
+---
 
 ## Future Improvements
-
 - Add push buttons for manual counting
 - Use 7-segment display
-- Add up/down counter functionality
-- Increase number of bits
+- Add up/down counter feature
+- Expand to 8-bit binary counter
+
+---
 
 ## Author
 
