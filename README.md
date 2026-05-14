@@ -107,6 +107,59 @@ Control blinking speed using potentiometer
 Create multiple blinking patterns
 Add push button control
 Convert into Morse code blinker
-## Author
 
+# 3.Traffic Light LED System
+Description
+
+This project is a simple traffic light simulation using Arduino and LEDs.
+
+The LEDs glow one after another in the sequence of a real traffic signal:
+Red → Yellow → Green
+
+Each LED stays ON for a fixed delay before switching to the next signal.
+
+Working Principle
+
+The Arduino sends HIGH and LOW signals to 3 LEDs connected to digital output pins.
+Each LED represents a traffic signal:
+Red LED → Stop
+Yellow LED → Wait
+Green LED → Go
+
+The Arduino turns ON one LED at a time with a delay between each signal.
+
+The sequence runs as:
+Red → Yellow → Green
+
+After completing the sequence, the cycle repeats continuously.
+
+Features
+
+Simulates a basic traffic light system
+Simple beginner-friendly Arduino project
+Demonstrates digital output control
+Uses basic electronic components
+Easy to expand into advanced traffic systems
+Components Used
+Arduino Uno
+3 LEDs (Red, Yellow, Green)
+3 × 100Ω Resistors
+Breadboard
+Jumper Wires
+
+Applications
+Learning Arduino programming basics
+Understanding traffic signal logic
+Beginner embedded systems practice
+Educational demonstration project
+Foundation for smart traffic systems
+
+Future Improvements
+Add pedestrian crossing button
+Use countdown timer display
+Add buzzer for signal indication
+Create automatic road junction control
+Expand into a smart traffic management syst
+
+## Author
 Subramanian R
