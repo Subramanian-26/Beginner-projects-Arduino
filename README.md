@@ -60,7 +60,53 @@ After reaching 15, the counter resets back to 0 and repeats.
 - Expand to 8-bit binary counter
 
 ---
+# 2. Blinking LED 
+Arduino Built-in LED Blinking
+Description
 
+This project demonstrates how to blink the built-in LED on the Arduino Uno board using Arduino programming.
+
+The LED turns ON and OFF repeatedly with a fixed delay, creating a blinking effect.
+It is one of the most basic and beginner-friendly Arduino projects.
+
+Working Principle
+
+The Arduino Uno has a built-in LED connected to digital pin 13.
+
+The program sends:
+
+HIGH signal → LED turns ON
+LOW signal → LED turns OFF
+
+A delay is added between ON and OFF states to make the blinking visible.
+
+The process repeats continuously in a loop.
+
+Features
+Simple beginner-friendly Arduino project
+Uses the built-in LED (no external components required)
+Demonstrates digital output control
+Helps understand Arduino programming basics
+Easy to modify with different blinking patterns
+
+Components Used
+Arduino Uno
+USB Cable
+Arduino IDE
+
+Applications
+Learning Arduino basics
+Understanding digital output control
+Beginner embedded systems practice
+Testing Arduino board functionality
+Foundation for LED-based projects
+
+Future Improvements
+Add external LEDs
+Control blinking speed using potentiometer
+Create multiple blinking patterns
+Add push button control
+Convert into Morse code blinker
 ## Author
 
 Subramanian R
