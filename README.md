@@ -160,6 +160,66 @@ Use countdown timer display
 Add buzzer for signal indication
 Create automatic road junction control
 Expand into a smart traffic management syst
+# Arduino Projects
 
+A collection of my Arduino projects built while learning electronics and embedded systems.
+
+---
+
+# 4. Potentiometer Controlled LED Brightness
+
+## Description
+This project controls the brightness of an LED using a potentiometer and Arduino.  
+The potentiometer acts as an input device, allowing smooth adjustment of LED brightness through PWM (Pulse Width Modulation).
+
+---
+
+## Working Principle
+The Arduino reads the analog value from the potentiometer connected to an analog pin.
+
+- The potentiometer value ranges from `0` to `1023`.
+- The Arduino maps this value to a PWM range of `0` to `255`.
+- The PWM signal controls the LED brightness.
+- Rotating the potentiometer:
+  - decreases brightness at lower values
+  - increases brightness at higher values
+
+The LED brightness changes smoothly based on the potentiometer position.
+
+---
+
+## Features
+- Controls LED brightness using a potentiometer
+- Demonstrates analog input reading
+- Uses PWM for smooth brightness control
+- Beginner-friendly Arduino project
+- Real-time brightness adjustment
+
+---
+
+## Components Used
+- Arduino Uno
+- 1 LED
+- 1 × 150Ω Resistor
+- Potentiometer
+- Breadboard
+- Jumper Wires
+
+---
+
+## Applications
+- Learning analog input in Arduino
+- Understanding PWM (Pulse Width Modulation)
+- LED dimming systems
+- Beginner embedded systems practice
+- Foundation for sensor-based control projects
+
+---
+
+## Future Improvements
+- Add multiple LEDs with independent brightness control
+- Display potentiometer values on Serial Monitor
+- Control RGB LED brightness
+- Add LCD display for brightness percentage
 ## Author
 Subramanian R
