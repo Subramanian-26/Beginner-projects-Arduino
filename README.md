@@ -82,7 +82,8 @@ A delay is added between ON and OFF states to make the blinking visible.
 
 The process repeats continuously in a loop.
 
-##Features
+Features
+
 Simple beginner-friendly Arduino project
 Uses the built-in LED (no external components required)
 Demonstrates digital output control
@@ -90,18 +91,21 @@ Helps understand Arduino programming basics
 Easy to modify with different blinking patterns
 
 Components Used
+
 Arduino Uno
 USB Cable
 Arduino IDE
 
-##Applications
+Applications
+
 Learning Arduino basics
 Understanding digital output control
 Beginner embedded systems practice
 Testing Arduino board functionality
 Foundation for LED-based projects
 
-##Future Improvements
+Future Improvements
+
 Add external LEDs
 Control blinking speed using potentiometer
 Create multiple blinking patterns
@@ -118,7 +122,7 @@ Red → Yellow → Green
 
 Each LED stays ON for a fixed delay before switching to the next signal.
 
-##Working Principle
+Working Principle
 
 The Arduino sends HIGH and LOW signals to 3 LEDs connected to digital output pins.
 Each LED represents a traffic signal:
@@ -133,7 +137,7 @@ Red → Yellow → Green
 
 After completing the sequence, the cycle repeats continuously.
 
-##Features
+Features
 
 Simulates a basic traffic light system
 Simple beginner-friendly Arduino project
@@ -141,21 +145,24 @@ Demonstrates digital output control
 Uses basic electronic components
 Easy to expand into advanced traffic systems
 
-##Components Used
+Components Used
+
 Arduino Uno
 3 LEDs (Red, Yellow, Green)
 3 × 100Ω Resistors
 Breadboard
 Jumper Wires
 
-##Applications
+Applications
+
 Learning Arduino programming basics
 Understanding traffic signal logic
 Beginner embedded systems practice
 Educational demonstration project
 Foundation for smart traffic systems
 
-##Future Improvements
+Future Improvements
+
 Add pedestrian crossing button
 Use countdown timer display
 Add buzzer for signal indication
