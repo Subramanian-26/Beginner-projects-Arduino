@@ -62,14 +62,14 @@ After reaching 15, the counter resets back to 0 and repeats.
 ---
 # 2. Blinking LED 
 Arduino Built-in LED Blinking
-Description
+##Description
 
 This project demonstrates how to blink the built-in LED on the Arduino Uno board using Arduino programming.
 
 The LED turns ON and OFF repeatedly with a fixed delay, creating a blinking effect.
 It is one of the most basic and beginner-friendly Arduino projects.
 
-Working Principle
+##Working Principle
 
 The Arduino Uno has a built-in LED connected to digital pin 13.
 
@@ -82,7 +82,7 @@ A delay is added between ON and OFF states to make the blinking visible.
 
 The process repeats continuously in a loop.
 
-Features
+##Features
 Simple beginner-friendly Arduino project
 Uses the built-in LED (no external components required)
 Demonstrates digital output control
@@ -94,14 +94,14 @@ Arduino Uno
 USB Cable
 Arduino IDE
 
-Applications
+##Applications
 Learning Arduino basics
 Understanding digital output control
 Beginner embedded systems practice
 Testing Arduino board functionality
 Foundation for LED-based projects
 
-Future Improvements
+##Future Improvements
 Add external LEDs
 Control blinking speed using potentiometer
 Create multiple blinking patterns
@@ -109,7 +109,7 @@ Add push button control
 Convert into Morse code blinker
 
 # 3.Traffic Light LED System
-Description
+##Description
 
 This project is a simple traffic light simulation using Arduino and LEDs.
 
@@ -118,7 +118,7 @@ Red → Yellow → Green
 
 Each LED stays ON for a fixed delay before switching to the next signal.
 
-Working Principle
+##Working Principle
 
 The Arduino sends HIGH and LOW signals to 3 LEDs connected to digital output pins.
 Each LED represents a traffic signal:
@@ -133,36 +133,35 @@ Red → Yellow → Green
 
 After completing the sequence, the cycle repeats continuously.
 
-Features
+##Features
 
 Simulates a basic traffic light system
 Simple beginner-friendly Arduino project
 Demonstrates digital output control
 Uses basic electronic components
 Easy to expand into advanced traffic systems
-Components Used
+
+##Components Used
 Arduino Uno
 3 LEDs (Red, Yellow, Green)
 3 × 100Ω Resistors
 Breadboard
 Jumper Wires
 
-Applications
+##Applications
 Learning Arduino programming basics
 Understanding traffic signal logic
 Beginner embedded systems practice
 Educational demonstration project
 Foundation for smart traffic systems
 
-Future Improvements
+##Future Improvements
 Add pedestrian crossing button
 Use countdown timer display
 Add buzzer for signal indication
 Create automatic road junction control
 Expand into a smart traffic management syst
-# Arduino Projects
 
-A collection of my Arduino projects built while learning electronics and embedded systems.
 
 ---
 
