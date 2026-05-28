@@ -227,5 +227,64 @@ The LED brightness changes smoothly based on the potentiometer position.
 - Display potentiometer values on Serial Monitor
 - Control RGB LED brightness
 - Add LCD display for brightness percentage
+
+- # 5. Serial Monitor Controlled RGB LEDs
+
+## Description
+
+This project allows the user to control LEDs through the Arduino Serial Monitor.
+The user can type a color name (`red`, `green`, or `blue`) in the Serial Monitor, and the corresponding LED glows based on the input.
+
+---
+
+## Working Principle
+
+The Arduino continuously waits for user input through the Serial Monitor.
+
+* The user enters a color name (`red`, `green`, or `blue`).
+* Arduino reads the input using `Serial.readString()`.
+* The entered text is checked using `if-else` conditions.
+* The selected LED turns ON while the others remain OFF.
+* The process repeats continuously, allowing multiple user inputs.
+
+---
+
+## Features
+
+* User-controlled LEDs through Serial Monitor
+* Supports multiple inputs continuously
+* Demonstrates serial communication in Arduino
+* Beginner-friendly project for learning input handling
+* Uses conditional statements (`if-else`) and string comparison
+
+---
+
+## Components Used
+
+* Arduino Uno
+* 3 LEDs (Red, Green, Blue)
+* 3 × 330Ω Resistors
+* Jumper Wires
+
+---
+
+## Applications
+
+* Learning Serial Monitor communication
+* Understanding user input handling in Arduino
+* Beginner embedded systems practice
+* Basic LED control systems
+* Foundation for command-based automation projects
+
+---
+
+## Future Improvements
+
+* Add support for turning LEDs OFF individually
+* Add multiple color combinations
+* Use an RGB LED instead of separate LEDs
+* Add brightness control using PWM
+* Expand to voice or Bluetooth control
+
 ## Author
 Subramanian R
