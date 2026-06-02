@@ -371,5 +371,81 @@ If an invalid color is entered, the Arduino displays:
 * Create smooth fading effects between colors
 * Add Bluetooth or mobile app control
 
+# 7.  Active Buzzer Control using Potentiometer
+
+## Description
+
+This project controls an active buzzer using a potentiometer and Arduino.
+The buzzer turns ON or OFF depending on the potentiometer position.
+
+When the potentiometer value crosses a set threshold, the buzzer activates. If the value falls below the threshold, the buzzer turns OFF.
+
+---
+
+## Working Principle
+
+The Arduino reads analog values from the potentiometer connected to an analog pin.
+
+The potentiometer provides values ranging from:
+
+`0 → 1023`
+
+The Arduino continuously checks the potentiometer value.
+
+* If the value is **greater than 500**, the active buzzer turns **ON**.
+* If the value is **less than or equal to 500**, the buzzer turns **OFF**.
+
+The potentiometer value is also displayed in the **Serial Monitor** for monitoring purposes.
+
+---
+
+## Features
+
+* Controls an active buzzer using a potentiometer
+* Reads analog input using `analogRead()`
+* Uses conditional statements for buzzer control
+* Displays potentiometer values in Serial Monitor
+* Beginner-friendly Arduino project
+* Demonstrates analog input and digital output concepts
+
+---
+
+## Components Used
+
+* Arduino Uno
+* Active Buzzer
+* Potentiometer
+* Jumper Wires
+
+---
+
+## Pin Connections
+
+* Active Buzzer (+) → Digital Pin 13
+* Active Buzzer (-) → GND
+* Potentiometer Middle Pin → A2
+* Potentiometer Side Pin → 5V
+* Potentiometer Other Side Pin → GND
+
+---
+
+## Applications
+
+* Alarm systems
+* Threshold-based warning systems
+* Sensor-based alert systems
+* Beginner embedded systems practice
+* Learning analog and digital interfacing
+
+---
+
+## Future Improvements
+
+* Add variable buzzer sound levels
+* Replace potentiometer with sensors
+* Add LED indication when buzzer is active
+* Create adjustable threshold values
+* Add LCD display for potentiometer readings
+
 ## Author
 Subramanian R
