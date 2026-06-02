@@ -286,5 +286,90 @@ The Arduino continuously waits for user input through the Serial Monitor.
 * Add brightness control using PWM
 * Expand to voice or Bluetooth control
 
+# 6. RGB LED Color Control using Arduino
+
+## Description
+
+This project controls an RGB LED using Arduino and Serial Monitor input.
+The RGB LED changes to different colors based on the color name entered through the Serial Monitor.
+
+---
+
+## Working Principle
+
+The Arduino receives color names from the Serial Monitor using serial communication.
+
+The RGB LED contains three internal LEDs:
+
+* Red
+* Green
+* Blue
+
+By controlling the brightness of these colors using PWM (`analogWrite()`), different colors are produced.
+
+The user enters a color name such as:
+
+`red` → Displays Red Color
+`green` → Displays Green Color
+`blue` → Displays Blue Color
+`yellow` → Mixes Red + Green
+`purple` → Mixes Red + Blue
+`cyan` → Mixes Green + Blue
+`white` → Mixes Red + Green + Blue
+
+If an invalid color is entered, the Arduino displays:
+
+`Invalid color`
+
+---
+
+## Features
+
+* Controls RGB LED using Serial Monitor input
+* Supports multiple color selections
+* Uses PWM (`analogWrite()`) for color mixing
+* Beginner-friendly Arduino project
+* Demonstrates serial communication and RGB color mixing
+* Easy to modify by adding more custom colors
+
+---
+
+## Components Used
+
+* Arduino Uno
+* RGB LED (Common Cathode)
+* 3 × 330Ω Resistors
+* Jumper Wires
+
+---
+
+## Pin Connections
+
+* Red Pin → Digital Pin 11
+* Blue Pin → Digital Pin 10
+* Green Pin → Digital Pin 9
+* Common Pin → GND
+
+---
+
+## Applications
+
+* Learning RGB color mixing
+* Understanding PWM in Arduino
+* Beginner serial communication practice
+* LED lighting projects
+* Educational electronics demonstrations
+* Foundation for smart lighting systems
+
+---
+
+## Future Improvements
+
+* Add more custom colors
+* Control brightness levels
+* Add button-based color switching
+* Create smooth fading effects between colors
+* Add Bluetooth or mobile app control
+
 ## Author
 Subramanian R
