@@ -638,5 +638,69 @@ The process continuously repeats inside the `loop()` function.
 * Use relay modules to control external devices
 * Expand into a smart home control system
 
+# 11. Sunlight-Based Servo Motor Control
+
+## Description
+
+This project uses a **photoresistor (LDR)** and a **servo motor** to control movement based on sunlight intensity.
+As sunlight decreases, the servo motor gradually moves toward **180 degrees**. During bright light, the servo remains near **0 degrees**.
+
+The project reads light intensity using an **LDR sensor** and adjusts the servo angle using simple conditional statements.
+
+---
+
+## Working Principle
+
+The Arduino reads the light level from the **photoresistor (LDR)** connected to an analog pin.
+
+* In **bright sunlight**, the servo stays at **0°**.
+* As sunlight decreases, the servo gradually moves to **45°**, **90°**, and **135°**.
+* In **darkness or night**, the servo reaches **180°**.
+
+The light value is also displayed in the **Serial Monitor** for monitoring and debugging.
+
+The process continuously repeats inside the `loop()` function.
+
+---
+
+## Features
+
+* Controls servo motor using sunlight intensity
+* Servo gradually moves as light decreases
+* Reaches **180° during darkness/night**
+* Displays light values in Serial Monitor
+* Beginner-friendly Arduino project
+* Uses simple `if-else` conditions instead of `map()`
+
+---
+
+## Components Used
+
+* Arduino Uno
+* Servo Motor
+* Photoresistor (LDR)
+* Resistor (for LDR circuit)
+* Jumper Wires
+
+---
+
+## Applications
+
+* Automatic solar tracking systems
+* Smart light-sensitive automation
+* Beginner sensor interfacing practice
+* Educational embedded systems project
+* Foundation for automatic curtain or panel systems
+
+---
+
+## Future Improvements
+
+* Add smoother servo movement
+* Display light intensity on an LCD screen
+* Add temperature monitoring
+* Use multiple LDRs for better light tracking
+* Expand into a fully automated solar tracking system
+
 ## Author
 Subramanian R
