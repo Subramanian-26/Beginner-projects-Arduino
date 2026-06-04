@@ -511,7 +511,7 @@ This creates a simple light-level indicator system.
 * Control room lights automatically using a relay
 * Use RGB LEDs for multiple light levels
 
-# 8. Push Button LED Control
+# 9. Push Button LED Control
 
 ## Description
 
@@ -569,6 +569,74 @@ The system continuously checks the button state in the `loop()` function.
 * Add buzzer feedback when button is pressed
 * Control appliances using a relay module
 * Convert into a toggle switch system
+
+# 10. Push Button Toggle LED Switch
+
+## Description
+
+This project demonstrates how to use a push button as a **toggle switch** using Arduino.
+The LED changes its state every time the push button is pressed.
+
+* First press → LED turns **ON**
+* Second press → LED turns **OFF**
+* Third press → LED turns **ON** again
+
+The project uses `digitalRead()` to detect button presses and stores previous button states to prevent repeated toggling while holding the button.
+
+---
+
+## Working Principle
+
+The Arduino reads the push button state using `digitalRead()`.
+
+* `buttonNew` stores the **current button state**.
+* `buttonOld` stores the **previous button state**.
+* The Arduino checks if the button changes from **LOW to HIGH**, indicating a new button press.
+* When a press is detected, the LED state toggles between **ON** and **OFF**.
+* The button value is also displayed in the **Serial Monitor** for monitoring and debugging.
+
+The process continuously repeats inside the `loop()` function.
+
+---
+
+## Features
+
+* Uses push button as a toggle switch
+* LED turns ON/OFF with each button press
+* Prevents repeated toggling while holding the button
+* Displays button state in Serial Monitor
+* Beginner-friendly Arduino project
+* Demonstrates digital input and output concepts
+
+---
+
+## Components Used
+
+* Arduino Uno
+* Push Button
+* LED
+* 220Ω Resistor
+* Jumper Wires
+
+---
+
+## Applications
+
+* Learning push button interfacing
+* Understanding digital input/output basics
+* Beginner embedded systems practice
+* Foundation for switch-based automation systems
+* Educational electronics demonstration project
+
+---
+
+## Future Improvements
+
+* Add multiple LEDs with separate toggle buttons
+* Implement advanced button debouncing
+* Add buzzer feedback for button press
+* Use relay modules to control external devices
+* Expand into a smart home control system
 
 ## Author
 Subramanian R
