@@ -511,5 +511,64 @@ This creates a simple light-level indicator system.
 * Control room lights automatically using a relay
 * Use RGB LEDs for multiple light levels
 
+# 8. Push Button LED Control
+
+## Description
+
+This project demonstrates how to use a push button with Arduino to control an LED using `digitalRead()`.
+The LED turns **ON** when the button input becomes `0` (LOW) and turns **OFF** when the input is `1` (HIGH).
+
+---
+
+## Working Principle
+
+The Arduino reads the state of a push button connected to a digital input pin using `digitalRead()`.
+
+* When the button input is **LOW (0)**, the Arduino turns the LED **ON**.
+* When the button input is **HIGH (1)**, the Arduino turns the LED **OFF**.
+* The button state is also displayed in the **Serial Monitor** for debugging and monitoring.
+
+The system continuously checks the button state in the `loop()` function.
+
+---
+
+## Features
+
+* Reads push button input using `digitalRead()`
+* Controls LED based on button state
+* Displays button values in Serial Monitor
+* Beginner-friendly Arduino project
+* Demonstrates basic digital input and output concepts
+
+---
+
+## Components Used
+
+* Arduino Uno
+* Push Button
+* LED
+* 220Ω Resistor
+* Jumper Wires
+
+---
+
+## Applications
+
+* Learning digital input/output in Arduino
+* Understanding push button interfacing
+* Beginner embedded systems practice
+* Foundation for switch-based automation systems
+* Educational electronics project
+
+---
+
+## Future Improvements
+
+* Add multiple LEDs with different button controls
+* Implement button debouncing
+* Add buzzer feedback when button is pressed
+* Control appliances using a relay module
+* Convert into a toggle switch system
+
 ## Author
 Subramanian R
