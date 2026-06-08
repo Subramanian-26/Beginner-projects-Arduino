@@ -702,5 +702,129 @@ The process continuously repeats inside the `loop()` function.
 * Use multiple LDRs for better light tracking
 * Expand into a fully automated solar tracking system
 
+# 12.  Robotic Arm Control using Potentiometers
+
+## Description
+
+This project is a beginner-friendly robotic arm control system using Arduino, two servo motors, and two potentiometers.
+
+The potentiometers act as controllers for the robotic arm. By rotating each potentiometer, the connected servo motor moves to different angles, simulating robotic arm movement.
+
+Unlike joystick-based robotic arms, this project uses **2 potentiometers** for easier and more precise control, making it ideal for beginners learning servo motor interfacing.
+
+---
+
+## Working Principle
+
+The Arduino reads analog values from two potentiometers connected to analog input pins.
+
+Each potentiometer controls one servo motor:
+
+* **Potentiometer 1** controls the **base servo motor** for left/right movement.
+* **Potentiometer 2** controls the **arm servo motor** for up/down movement.
+
+The potentiometer gives analog values ranging from **0 to 1023**.
+
+However, a servo motor can only rotate between **0° and 180°**. Therefore, the Arduino converts the potentiometer value into a suitable servo angle.
+
+This conversion is done using:
+
+```cpp
+angle = potentiometerValue / 5.68;
+```
+
+### Why divide by 5.68?
+
+The potentiometer produces values between **0 and 1023**, while the servo motor only understands angles from **0° to 180°**.
+
+To match these ranges:
+
+**1023 ÷ 180 ≈ 5.68**
+
+So, dividing the potentiometer value by **5.68** converts it into an angle that the servo motor can understand.
+
+### Example
+
+* Potentiometer value = **0** → Servo angle ≈ **0°**
+* Potentiometer value = **512** → Servo angle ≈ **90°**
+* Potentiometer value = **1023** → Servo angle ≈ **180°**
+
+As the potentiometer knob rotates, the servo motor position changes accordingly.
+
+---
+
+## Features
+
+* Controls a robotic arm using **2 potentiometers**
+* Beginner-friendly Arduino project
+* Demonstrates **analog input reading**
+* Demonstrates **servo motor control**
+* Smooth servo movement with adjustable angles
+* No breadboard required
+* Easy to modify and expand for advanced robotic arms
+
+---
+
+## Components Used
+
+* Arduino Uno
+* 2 × Servo Motors
+* 2 × Potentiometers
+* Jumper Wires
+
+---
+
+## Pin Connections
+
+### Potentiometer Connections
+
+**Potentiometer 1**
+
+* Left Pin → 5V
+* Right Pin → GND
+* Middle Pin (Signal) → A0
+
+**Potentiometer 2**
+
+* Left Pin → 5V
+* Right Pin → GND
+* Middle Pin (Signal) → A2
+
+### Servo Motor Connections
+
+**Base Servo**
+
+* Signal Wire → Pin 5
+* Power Wire → 5V
+* Ground Wire → GND
+
+**Arm Servo**
+
+* Signal Wire → Pin 6
+* Power Wire → 5V
+* Ground Wire → GND
+
+**Note:** This project is designed **without using a breadboard**. All components can be connected directly to the Arduino using jumper wires.
+
+---
+
+## Applications
+
+* Learning servo motor control
+* Understanding analog input devices
+* Beginner embedded systems practice
+* Robotic arm simulation
+* Educational demonstration project
+
+---
+
+## Future Improvements
+
+* Add a robotic gripper using an extra servo
+* Replace potentiometers with a joystick module
+* Add preset arm positions
+* Implement wireless control using Bluetooth
+* Expand into a multi-axis robotic arm system
+
 ## Author
 Subramanian R
