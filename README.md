@@ -826,5 +826,104 @@ As the potentiometer knob rotates, the servo motor position changes accordingly.
 * Implement wireless control using Bluetooth
 * Expand into a multi-axis robotic arm system
 
+# 13. Tilt Switch Position Indicator
+
+## Description
+
+This project is a beginner-friendly Arduino tilt switch project using a **tilt switch** and **two LEDs**.
+
+The system detects the orientation of the tilt switch and indicates the state using LED colors.
+
+* When the tilt switch is **tilted/activated**, the **red LED glows**.
+* When the tilt switch is **in normal position**, the **green LED glows**.
+
+This project helps beginners understand how digital sensors work using Arduino.
+
+---
+
+## Working Principle
+
+The Arduino reads the digital signal from the tilt switch connected to a digital input pin.
+
+The tilt switch behaves like an **ON/OFF sensor**:
+
+* When tilted, the internal metal contact completes the circuit and sends a signal.
+* When not tilted, the circuit remains open.
+
+The project uses **INPUT_PULLUP mode**, meaning the Arduino internally maintains a HIGH signal.
+
+The output works as follows:
+
+* **Tilt detected (LOW)** → Red LED ON, Green LED OFF
+* **No tilt (HIGH)** → Green LED ON, Red LED OFF
+
+The tilt switch state is also displayed in the **Serial Monitor** for testing and debugging.
+
+---
+
+## Features
+
+* Detects tilt orientation using a tilt switch
+* Beginner-friendly Arduino project
+* Uses two LEDs for visual indication
+* Demonstrates digital input sensing
+* Uses Arduino **INPUT_PULLUP**
+* Displays sensor state in Serial Monitor
+* No breadboard required
+* Easy to modify for alarm systems
+
+---
+
+## Components Used
+
+* Arduino Uno
+* Tilt Switch
+* 1 × Red LED
+* 1 × Green LED
+* 2 × 200Ω Resistors
+* Jumper Wires
+
+---
+
+## Pin Connections
+
+### Tilt Switch Connection
+
+* Pin 1 → GND
+* Pin 2 → Digital Pin 2
+
+### Red LED Connection
+
+* Positive Leg (+) → Digital Pin 13
+* Negative Leg (–) → 200Ω Resistor → GND
+
+### Green LED Connection
+
+* Positive Leg (+) → Digital Pin 12
+* Negative Leg (–) → 200Ω Resistor → GND
+
+**Note:** This project is designed **without using a breadboard**. All components are connected directly to the Arduino using jumper wires.
+
+---
+
+## Applications
+
+* Tilt detection systems
+* Anti-theft alarms
+* Motion sensing projects
+* Safety monitoring systems
+* Educational demonstration project
+* Beginner embedded systems practice
+
+---
+
+## Future Improvements
+
+* Add a buzzer for tilt warning
+* Add LCD display for status indication
+* Replace LEDs with relay-controlled devices
+* Use accelerometer sensor for advanced tilt measurement
+* Create a fall detection system
+
 ## Author
 Subramanian R
