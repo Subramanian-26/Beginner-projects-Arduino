@@ -925,5 +925,85 @@ The tilt switch state is also displayed in the **Serial Monitor** for testing an
 * Use accelerometer sensor for advanced tilt measurement
 * Create a fall detection system
 
+# 14. Tilt Sensor Controlled DC Motor with LED Indicator
+
+## Description
+
+This project is a **tilt sensor-based DC motor control system using Arduino and L293D motor driver**. The motor runs continuously when no tilt is detected and automatically stops when the tilt sensor detects movement or inclination.
+
+An LED indicator is also included to visually show the motor status. The LED glows when the motor is running and turns OFF when the motor stops.
+
+## Working Principle
+
+The Arduino continuously reads the state of the **tilt sensor**.
+
+When **no tilt is detected**, the Arduino:
+
+* Sends PWM signal to the **L293D motor driver**
+* Rotates the **DC motor**
+* Turns ON the **LED indicator**
+
+When **tilt is detected**, the Arduino:
+
+* Stops the motor
+* Turns OFF the LED
+
+The **L293D motor driver** is used because the Arduino cannot directly power the DC motor safely.
+
+## Features
+
+* Tilt sensor-based motor control
+* Automatic motor stop on tilt detection
+* LED indication for motor running status
+* PWM-based motor speed control
+* Beginner-friendly Arduino project
+* Uses L293D motor driver for safe motor operation
+
+## Components Used
+
+* Arduino Uno
+* DC Motor
+* L293D Motor Driver IC
+* Tilt Sensor
+* LED
+* **220Ω Resistor**
+* 9V Battery
+* Breadboard
+* Jumper Wires
+
+## Pin Connections
+
+### L293D Connections
+
+* **Pin 1 (Enable 1)** → Arduino Pin **9**
+* **Pin 2 (Input 1)** → Arduino Pin **7**
+* **Pin 7 (Input 2)** → Arduino Pin **8**
+* **Pin 3 & 6** → DC Motor
+* **Pin 8 (Motor Power)** → 9V Battery Positive
+* **Pin 16 (Logic Power)** → Arduino 5V
+* **Pins 4, 5, 12, 13** → GND
+
+### Other Connections
+
+* **Tilt Sensor** → Arduino Pin **2**
+* **LED Positive Leg** → Arduino Pin **5**
+* **LED Negative Leg** → GND through **220Ω resistor**
+
+## Applications
+
+* Automatic safety motor systems
+* Tilt detection systems
+* Motion-sensitive devices
+* Smart cooling/fan systems
+* Beginner embedded systems practice
+
+## Future Improvements
+
+* Add buzzer alert on tilt detection
+* Add LCD display for motor status
+* Add potentiometer for speed adjustment
+* Add reverse motor rotation feature
+* Use multiple sensors for better detection
+
 ## Author
 Subramanian R
