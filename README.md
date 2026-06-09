@@ -1005,5 +1005,137 @@ The **L293D motor driver** is used because the Arduino cannot directly power the
 * Add reverse motor rotation feature
 * Use multiple sensors for better detection
 
+# 15. DC Motor Speed and Direction Control using Potentiometers, Push Button, and Arduino
+
+## Description
+
+This project is a **potentiometer-based DC motor control system** using **Arduino Uno** and the **L293D motor driver IC**.
+
+The system uses:
+
+* **One potentiometer** to control the **speed** of the DC motor
+* **Another potentiometer** to control the **direction** of rotation
+* A **push button** to toggle the motor **ON/OFF**
+
+The motor is initially **OFF** and starts running when the push button is pressed. Pressing the button again turns the motor OFF.
+
+The project also displays the **motor status, direction, and speed** in the **Serial Monitor** for real-time monitoring.
+
+## Working Principle
+
+The Arduino continuously reads input values from the **two potentiometers** and the **push button**.
+
+### Speed Control
+
+A potentiometer connected to **A1** controls the motor speed.
+
+The potentiometer value ranges from:
+
+**0 → 1023**
+
+This value is scaled to:
+
+**0 → 255**
+
+and applied to the motor using **PWM (Pulse Width Modulation)** through the **Enable pin** of the L293D motor driver.
+
+### Direction Control
+
+A second potentiometer connected to **A2** controls the motor direction.
+
+* Value below midpoint → **Forward Direction**
+* Value above midpoint → **Reverse Direction**
+
+The Arduino changes the motor direction by controlling the **IN1** and **IN2** pins of the L293D.
+
+### Push Button Control
+
+A push button connected to **Pin 2** acts as a toggle switch.
+
+* First press → **Motor ON**
+* Second press → **Motor OFF**
+* Repeats continuously
+
+The button uses **INPUT_PULLUP** mode, so no external pull-up resistor is required.
+
+### Serial Monitor Output
+
+The Arduino continuously displays:
+
+* **Motor Status (ON/OFF)**
+* **Motor Direction (Forward/Reverse)**
+* **Motor Speed (0–255 PWM value)**
+
+in the **Serial Monitor**.
+
+## Features
+
+* Potentiometer-based speed control
+* Potentiometer-based direction control
+* Push button ON/OFF toggle mechanism
+* PWM motor speed variation
+* Bidirectional motor rotation
+* Real-time Serial Monitor feedback
+* Beginner-friendly Arduino project
+* Safe DC motor interfacing using L293D
+
+## Components Used
+
+* Arduino Uno
+* L293D Motor Driver IC
+* DC Motor
+* 2 Potentiometers
+* Push Button
+* Breadboard
+* Jumper Wires
+* 9V Battery / External Power Supply
+
+## Pin Connections
+
+### L293D Connections
+
+* **Pin 1 (Enable 1)** → Arduino **Pin 9**
+* **Pin 2 (Input 1)** → Arduino **Pin 7**
+* **Pin 7 (Input 2)** → Arduino **Pin 8**
+* **Pin 3 and Pin 6** → DC Motor
+* **Pin 8 (Motor Supply)** → External Power Supply Positive
+* **Pin 16 (Logic Supply)** → Arduino **5V**
+* **Pins 4, 5, 12, 13** → **GND**
+
+### Potentiometer Connections
+
+#### Speed Potentiometer
+
+* Middle pin → **A1**
+* Side pins → **5V and GND**
+
+#### Direction Potentiometer
+
+* Middle pin → **A2**
+* Side pins → **5V and GND**
+
+### Push Button Connections
+
+* One side → **Arduino Pin 2**
+* Other side → **GND**
+
+## Applications
+
+* Smart fan control systems
+* Robotics and automation projects
+* Motor speed regulation systems
+* Conveyor belt motor control
+* Educational embedded systems projects
+* Beginner motor control learning
+
+## Future Improvements
+
+* Add LCD/OLED display for motor speed and direction
+* Add LED indicators for motor state
+* Display actual RPM using a sensor
+* Add Bluetooth or Wi-Fi motor control
+* Implement speed presets
+* Add emergency stop functionality
+
 ## Author
 Subramanian R
