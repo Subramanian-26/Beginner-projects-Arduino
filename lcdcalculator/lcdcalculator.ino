@@ -22,7 +22,8 @@ void setup() {
 
   Serial.println("Enter: num1 operator num2");
   Serial.println("Example: 10 + 5");
-  lcd.println("Enter: num1 operator num2");
+  lcd.println("Enter: num1 oper");
+  lcd.setCursor("num2");
   delay(2000);
   lcd.clear();
   lcd.println("Example: 10 + 5");
