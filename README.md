@@ -1137,5 +1137,281 @@ in the **Serial Monitor**.
 * Implement speed presets
 * Add emergency stop functionality
 
+# 16. LCD Calculator using Arduino and 16x2 LCD
+
+## Description
+
+This project is a simple **LCD-based calculator** using an **Arduino Uno** and a **16x2 LCD display**.
+The calculator performs the four basic arithmetic operations:
+
+* Addition (+)
+* Subtraction (-)
+* Multiplication (*)
+* Division (/)
+
+The calculator accepts **two numbers and one operator at a time** through the **Serial Monitor** and displays both the equation and result on the LCD.
+
+---
+
+## Working Principle
+
+The Arduino receives input from the **Serial Monitor** in the following format:
+
+```text
+number1 operator number2
+```
+
+Example:
+
+```text
+10 + 5
+```
+
+The Arduino:
+
+1. Reads the first number from the Serial Monitor
+2. Reads the mathematical operator
+3. Reads the second number
+4. Performs the selected arithmetic operation
+5. Displays the equation and result on the **16x2 LCD display**
+
+Example LCD Output:
+
+```text
+10+5
+=15
+```
+
+If division by zero occurs, the LCD displays:
+
+```text
+Math Error
+```
+
+If an invalid operator is entered, the LCD displays:
+
+```text
+Invalid Operator
+```
+
+---
+
+## Features
+
+* Performs **Addition, Subtraction, Multiplication, and Division**
+* Accepts user input through **Serial Monitor**
+* Displays equation and result on a **16x2 LCD**
+* Beginner-friendly Arduino project
+* Supports decimal numbers using `float`
+* Handles invalid operators
+* Detects division by zero
+
+---
+
+## Components Used
+
+* Arduino Uno
+* 16x2 LCD Display
+* 10kΩ Potentiometer (for LCD contrast adjustment)
+* 220Ω Resistor (for LCD backlight protection)
+* Breadboard
+* Jumper Wires
+
+---
+
+## Circuit Connections
+
+### LCD to Arduino Connections
+
+| LCD Pin       | Function               | Arduino Connection          |
+| ------------- | ---------------------- | --------------------------- |
+| 1 (GND)       | Ground                 | GND                         |
+| 2 (VCC)       | Power                  | 5V                          |
+| 3 (VO)        | Contrast Control       | Middle Pin of Potentiometer |
+| 4 (RS)        | Register Select        | Pin 7                       |
+| 5 (RW)        | Read/Write             | GND                         |
+| 6 (E)         | Enable                 | Pin 8                       |
+| 11 (D4)       | Data Pin 4             | Pin 9                       |
+| 12 (D5)       | Data Pin 5             | Pin 10                      |
+| 13 (D6)       | Data Pin 6             | Pin 11                      |
+| 14 (D7)       | Data Pin 7             | Pin 12                      |
+| 15 (A / LED+) | LCD Backlight Positive | 5V through 220Ω Resistor    |
+| 16 (K / LED−) | LCD Backlight Negative | GND                         |
+
+### Potentiometer Connections
+
+| Potentiometer Pin | Connection     |
+| ----------------- | -------------- |
+| Left Pin          | 5V             |
+| Middle Pin        | LCD VO (Pin 3) |
+| Right Pin         | GND            |
+
+The potentiometer is used to adjust the **LCD contrast** for better visibility of text on the display.
+
+---
+
+## Input Format
+
+Enter calculations in the **Serial Monitor** using the following format:
+
+```text
+number1 operator number2
+```
+
+Examples:
+
+```text
+10 + 5
+25 - 10
+7 * 8
+20 / 4
+```
+
+---
+
+## How It Works
+
+When the program starts:
+
+1. The LCD displays **"LCD Calculator"**
+2. Instructions are shown briefly on the LCD
+3. The Serial Monitor asks the user to enter an expression
+
+After input:
+
+* The LCD shows the entered equation
+* The second row displays the calculated result
+
+Example:
+
+Input:
+
+```text
+8 * 5
+```
+
+LCD Output:
+
+```text
+8*5
+=40
+```
+
+---
+
+## Example Outputs
+
+### Addition
+
+Input:
+
+```text
+12 + 8
+```
+
+LCD Output:
+
+```text
+12+8
+=20
+```
+
+### Subtraction
+
+Input:
+
+```text
+20 - 5
+```
+
+LCD Output:
+
+```text
+20-5
+=15
+```
+
+### Multiplication
+
+Input:
+
+```text
+6 * 4
+```
+
+LCD Output:
+
+```text
+6*4
+=24
+```
+
+### Division
+
+Input:
+
+```text
+25 / 5
+```
+
+LCD Output:
+
+```text
+25/5
+=5
+```
+
+### Division by Zero
+
+Input:
+
+```text
+10 / 0
+```
+
+LCD Output:
+
+```text
+Math Error
+```
+
+### Invalid Operator
+
+Input:
+
+```text
+10 % 5
+```
+
+LCD Output:
+
+```text
+Invalid Operator
+```
+
+---
+
+## Applications
+
+* Learning LCD interfacing with Arduino
+* Understanding Serial communication
+* Beginner embedded systems practice
+* Basic calculator logic implementation
+* Educational Arduino demonstration project
+
+---
+
+## Future Improvements
+
+* Add keypad input instead of Serial Monitor
+* Support multiple calculations without re-entering
+* Add percentage and modulus operations
+* Implement scientific calculator functions
+* Use I2C LCD to reduce wiring complexity
+* Add memory functions (M+, M−, MR)
+
+---
+
+
 ## Author
 Subramanian R
