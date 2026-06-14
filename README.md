@@ -1411,6 +1411,122 @@ Invalid Operator
 * Add memory functions (M+, M−, MR)
 
 ---
+# 17. Temperature Monitoring using TMP36 and LCD
+
+## Description
+
+This project is a temperature monitoring system using an Arduino, TMP36 temperature sensor, and a 16×2 LCD display.
+
+The TMP36 sensor measures the surrounding temperature and sends an analog voltage signal to the Arduino. The Arduino converts this analog value into temperature in Celsius and displays it continuously on the LCD screen as well as the Serial Monitor.
+
+## Working Principle
+
+The TMP36 sensor produces an analog voltage that varies according to temperature.
+
+The Arduino reads this analog voltage through analog pin **A0** using `analogRead()`.
+
+The analog value is then converted into voltage and finally into temperature in Celsius using mathematical conversion formulas.
+
+The LCD continuously displays the measured temperature.
+
+### Conversion Process
+
+#### 1. Analog Value to Voltage
+
+The Arduino reads values from **0 to 1023** because of its **10-bit ADC (Analog to Digital Converter)**.
+
+The voltage is calculated using:
+
+```text
+Voltage = Sensor Value × (5.0 / 1023.0)
+```
+
+Where:
+
+* **5.0V** = Arduino operating voltage
+* **1023** = maximum ADC value
+
+#### 2. Voltage to Temperature
+
+The TMP36 sensor gives:
+
+* **0.5V at 0°C**
+* Increases by **10mV (0.01V) per °C**
+
+Temperature is calculated using:
+
+```text
+Temperature (°C) = (Voltage − 0.5) × 100
+```
+
+### Example Conversion
+
+If the sensor outputs **0.75V**:
+
+```text
+Temperature = (0.75 − 0.5) × 100
+Temperature = 25°C
+```
+
+## Features
+
+* Displays real-time temperature on LCD
+* Shows temperature in Celsius
+* Outputs temperature to Serial Monitor
+* Beginner-friendly Arduino project
+* Demonstrates analog sensor interfacing
+* Demonstrates ADC conversion
+
+## Components Used
+
+* Arduino Uno
+* TMP36 Temperature Sensor
+* 16×2 LCD Display
+* 10kΩ Potentiometer (for LCD contrast)
+* Breadboard
+* Jumper Wires
+
+## Connections
+
+### TMP36 Connections
+
+(Keep the flat side facing you)
+
+* **Left Pin (VCC)** → **5V**
+* **Middle Pin (VOUT)** → **A0**
+* **Right Pin (GND)** → **GND**
+
+### LCD Connections
+
+* **RS** → Pin 7
+* **EN** → Pin 8
+* **D4** → Pin 9
+* **D5** → Pin 10
+* **D6** → Pin 11
+* **D7** → Pin 12
+* **VSS** → GND
+* **VDD** → 5V
+* **VO** → Middle pin of potentiometer
+* **RW** → GND
+* **LED+ (A)** → 5V
+* **LED− (K)** → GND
+
+## Applications
+
+* Temperature monitoring systems
+* Weather monitoring basics
+* Home automation projects
+* Embedded systems learning
+* Sensor interfacing practice
+
+## Future Improvements
+
+* Display temperature in Fahrenheit
+* Add buzzer for high temperature alert
+* Add humidity sensor
+* Store temperature data
+* Create a smart room monitoring system
+
 
 
 ## Author
