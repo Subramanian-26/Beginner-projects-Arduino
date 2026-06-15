@@ -1527,6 +1527,67 @@ Temperature = 25°C
 * Store temperature data
 * Create a smart room monitoring system
 
+# 18.  Ultrasonic Distance Alert System
+
+## Description
+
+This project is an Arduino-based distance detection system using an ultrasonic sensor (HC-SR04), LED, and buzzer.
+
+The system continuously measures the distance between the sensor and nearby objects. If an object comes closer than **15 cm**, the buzzer sounds and an LED turns ON as an alert.
+
+The measured distance is also displayed in the Serial Monitor.
+
+## Working Principle
+
+The Arduino sends an ultrasonic pulse through the **Trigger pin** of the HC-SR04 sensor.
+
+The sensor emits sound waves, which travel toward an object and bounce back to the sensor.
+
+The **Echo pin** measures the travel time of the sound wave using `pulseIn()`.
+
+Arduino calculates the distance using the speed of sound formula.
+
+If the detected distance is:
+
+* **Less than 15 cm** → LED turns ON and buzzer sounds
+* **Greater than or equal to 15 cm** → LED turns OFF and buzzer stops
+
+The measured distance is continuously printed to the Serial Monitor in centimeters.
+
+## Features
+
+* Real-time distance measurement using ultrasonic sensor
+* LED alert for close objects
+* Buzzer warning using `tone()` function
+* Serial Monitor displays distance values
+* Beginner-friendly Arduino project
+* Easy to customize distance threshold
+
+## Components Used
+
+* Arduino Uno
+* HC-SR04 Ultrasonic Sensor
+* LED
+* 200Ω Resistor
+* Piezo Buzzer
+* Jumper Wires
+
+## Applications
+
+* Obstacle detection system
+* Parking assistance prototype
+* Distance monitoring system
+* Basic security alert system
+* Beginner embedded systems practice
+
+## Future Improvements
+
+* Add LCD display for showing distance
+* Implement variable buzzer speed based on distance
+* Add multiple LEDs for different distance ranges
+* Use servo motor for rotating distance scanning
+* Integrate with IoT for remote monitoring
+
 
 
 ## Author
