@@ -989,6 +989,87 @@ Temperature = 25°C
 * Store temperature data
 * Create a smart room monitoring system
 
+# 14. IR Remote Receiver using Arduino
+## Description
+
+This project demonstrates how to receive infrared (IR) signals from a remote control using an Arduino Uno and an IR Receiver module. When a button on the remote is pressed, the Arduino decodes the received signal and displays its corresponding hexadecimal code on the Serial Monitor.
+
+## Components Required
+Arduino Uno
+IR Receiver Module
+IR Remote Control
+Jumper Wires
+
+## Circuit Connections
+IR Receiver Pin	Arduino Uno Pin
+VCC	5V
+GND	GND
+OUT (Signal)	Digital Pin 9
+
+## Working Principle
+The IR remote transmits infrared signals when a button is pressed.
+The IR receiver detects the transmitted signal.
+The IRremote library decodes the received signal.
+The decoded hexadecimal button code is displayed on the Serial Monitor.
+The receiver is reset after each successful read to detect the next button press.
+
+## Code Explanation
+#include <IRremote.hpp>
+
+Includes the IRremote library, which provides functions for receiving and decoding infrared signals.
+
+IrReceiver.begin(receiverPin, ENABLE_LED_FEEDBACK)
+
+Initializes the IR receiver on the specified Arduino pin and enables the built-in LED to blink whenever an IR signal is detected.
+
+IrReceiver.decode()
+
+Checks whether a complete IR signal has been received.
+
+Returns true when a valid IR signal is available.
+
+IrReceiver.decodedIRData
+
+A structure that stores all the decoded information of the received IR signal.
+
+It contains:
+
+Raw Data
+Protocol
+Address
+Command
+IrReceiver.decodedIRData.decodedRawData
+
+Returns the raw hexadecimal code of the button that was pressed on the remote.
+
+Example:
+
+BA45FF00
+IrReceiver.resume()
+
+Resets the receiver after processing a signal, allowing it to receive the next button press.
+
+Sample Output
+BA45FF00
+B946FF00
+B847FF00
+
+## Applications
+Home Automation
+Robot Control
+Wireless Device Control
+Smart Home Systems
+Remote-Controlled Electronics
+Security Systems
+
+## Concepts Learned
+Infrared (IR) Communication
+IR Signal Decoding
+Using External Libraries
+Reading Sensor Data
+Hexadecimal Representation
+Object-Oriented Programming (Library Objects)
+
 
 
 
