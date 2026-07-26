@@ -1070,6 +1070,56 @@ Reading Sensor Data
 Hexadecimal Representation
 Object-Oriented Programming (Library Objects)
 
+# 14.PIR Motion Detection Alarm
+## Description
+This project is a PIR (Passive Infrared) Motion Detection Alarm using an Arduino Uno, a PIR motion sensor, and a passive buzzer.
+
+The PIR sensor continuously monitors its surroundings for changes in infrared radiation. When motion is detected, the Arduino activates the passive buzzer to produce an alarm tone. When no motion is detected, the buzzer remains silent.
+
+## Working Principle
+
+The PIR sensor detects movement by sensing changes in infrared energy emitted by people or animals.
+
+When motion is detected, the PIR sensor outputs a HIGH signal.
+The Arduino reads this signal through a digital input pin.
+If the signal is HIGH, the Arduino generates a 1000 Hz tone on the passive buzzer using the tone() function.
+When no motion is detected, the PIR sensor outputs LOW, and the Arduino stops the buzzer using the noTone() function.
+The process repeats continuously, providing real-time motion detection.
+
+## Features
+
+Detects human or object movement using a PIR sensor
+Activates a passive buzzer when motion is detected
+Displays motion status on the Serial Monitor
+Beginner-friendly Arduino security project
+Easy to understand and modify
+
+## Components Used
+
+Arduino Uno
+PIR Motion Sensor (HC-SR501 or equivalent)
+Passive Buzzer
+Jumper Wires
+
+## Applications
+
+Home security systems
+Intruder detection alarms
+Motion-activated warning systems
+Smart room automation
+Beginner embedded systems projects
+Basic IoT security prototypes
+
+## Future Improvements
+
+Add an LED indicator for visual alerts
+Display motion status on an LCD/OLED
+Send notifications using an ESP32 over Wi-Fi
+Add a relay to control external devices
+Implement an arm/disarm feature using a keypad or RFID
+Log motion events using an SD card and RTC module
+Add adjustable alarm tones and delay settings
+
 
 
 
